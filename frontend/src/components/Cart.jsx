@@ -11,7 +11,7 @@ function Cart() {
 
   useEffect(() => {
     // Fetch cart from backend
-    axios.get(`/api/cart/${userId}`)
+    axios.get(`https://localhost:3000/api/cart/${userId}`)
       .then(res => dispatch(syncCart(res.data)))
       .catch(err => console.error(err));
   }, [dispatch]);
